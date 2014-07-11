@@ -1,0 +1,15 @@
+{
+  "name": "dyn-ip",
+  "version": "0.0.1",
+  "description": "A simple tool to handle logging a constnatly changing ip",
+  "main": "ip-sender.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPL V2",
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.5.1"
+  }
+}
