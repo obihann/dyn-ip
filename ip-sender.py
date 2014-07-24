@@ -1,6 +1,6 @@
-import httplib, urllib
+import http.client, urllib.parse
 # get IP
-conn = httplib.HTTPConnection("curlmyip.com")
+conn = http.client.HTTPConnection("curlmyip.com")
 conn.request("GET", "/")
 r = conn.getresponse()
 ip = r.read().rstrip()
@@ -9,13 +9,13 @@ ip = r.read().rstrip()
 conn.close()
 
 # post IP
-postConn = httplib.HTTPConnection("localhost:3000")
-params = urllib.urlencode({'ip': ip})
+postConn = http.client.HTTPConnection("dyn-ip.herokuapp.com")
+params = urllib.parse.urlencode({'ip': ip})
 headers = {"Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain"}
 postConn.request("POST", "", params, headers)
 response = postConn.getresponse()
 data = response.read()
-print data
+print(data)
 
 # close conn
 postConn.close()
