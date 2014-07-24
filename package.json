@@ -10,6 +10,7 @@
   "license": "GPL V2",
   "dependencies": {
     "body-parser": "^1.4.3",
-    "express": "^4.5.1"
+    "express": "^4.5.1",
+    "redis": "^0.11.0"
   }
 }
