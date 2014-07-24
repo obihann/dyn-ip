@@ -1,5 +1,5 @@
 var redis = require("redis"),
-    client = redis.createClient(process.env.REDIS_TOGO_URL);
+    client = redis.createClient(process.env.REDISTOGO_URL);
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
