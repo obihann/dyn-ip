@@ -10,13 +10,12 @@ if (process.env.REDISTOGO_URL) {
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
-var salt = "=4-{.@hE]!EBk<o";
 app.use(bodyParser());
 
 app.post('/', function(req, res){
     var data = req.body;
     redis.get("current_ip", function(err, reply){
-        if(reply) {
+        if(reply != data) {
             redis.set("old_ip", reply, redis.print);
         }
 

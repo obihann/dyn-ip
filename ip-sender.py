@@ -1,3 +1,4 @@
+#!/bin/python
 import http.client, urllib.parse
 # get IP
 conn = http.client.HTTPConnection("curlmyip.com")
