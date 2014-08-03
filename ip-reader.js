@@ -25,6 +25,10 @@ app.post('/', function(req, res){
     res.json({success: true});
 });
 
+app.get('/about', function(req, res){
+    res.redirect("https://github.com/obihann/dyn-ip");
+});
+
 app.get('/old', function(req, res){
     redis.get("old_ip", function(err, reply){
         res.send(reply);
